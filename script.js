@@ -11,12 +11,12 @@ socket.on('chat-message', data => {
     appendMessage(`${data.name}: ${data.message}`)
 })
 
-socket.on('user-connected', name => {
-    appendMessage(`${name} connected`)
+socket.on('user-connected', userName => {
+    appendMessage(`${userName} connected`)
 })
 
-socket.on('user-disconnected', name => {
-    appendMessage(`${name} disconnected`)
+socket.on('user-disconnected', userName => {
+    appendMessage(`${userName} disconnected`)
 })
 
 // whenever form is submitted, stop page from posting to server
